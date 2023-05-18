@@ -38,4 +38,4 @@ jobs:
       - name: Publish package to NPM 📦
         run: cd packages/ && npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
