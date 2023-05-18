@@ -36,6 +36,6 @@ jobs:
         run: cp README.md packages/ && cp LICENSE packages/
 
       - name: Publish package to NPM 📦
-        run: cd packages/dist/ && npm publish
+        run: cd packages/ && npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
