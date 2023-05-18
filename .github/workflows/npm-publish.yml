@@ -14,28 +14,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
 
-      - name: Setup pnpm
+      - name: Install pnpm
         uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: pnpm
+          registry-url: https://registry.npmjs.org/
 
-      - name: Build Packages   
-        run: pnpm build
-      
-      - name: Copy Files
-        run: cp README.md packages/ && cp LICENSE packages/
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - run: cp README.md packages/ && cp LICENSE packages/
 
       - name: Publish package to NPM 📦
         run: cd packages/ && npm publish
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

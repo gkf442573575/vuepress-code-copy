@@ -1,6 +1,6 @@
 {
   "name": "vuepress-code-copy-repo",
-  "version": "1.0.6",
+  "version": "1.0.5",
   "description": "Code Copy Plugin For Vuepress2.X",
   "main": "index.js",
   "repository": {
