@@ -1,0 +1,38 @@
+{
+  "name": "vuepress-code-copy-repo",
+  "version": "1.0.5",
+  "description": "Code Copy Plugin For Vuepress2.X",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkf442573575/vuepress-code-copy.git"
+  },
+  "keywords": [
+    "vuepress"
+  ],
+  "author": "gkf442573575@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gkf442573575/vuepress-code-copy/issues"
+  },
+  "homepage": "https://github.com/gkf442573575/vuepress-code-copy#readme",
+  "scripts": {
+    "build": "pnpm run -C packages build",
+    "dev": "pnpm run -C packages build && concurrently \"pnpm run lib:dev\" \"pnpm run docs:dev\" && pnpm run lib:copy",
+    "docs:dev": "pnpm run -C docs docs:dev",
+    "docs:build": "pnpm run -C docs docs:build",
+    "lib:copy": "pnpm run -C packages copy",
+    "lib:dev": "pnpm run -C packages dev",
+    "release:version": "bumpp package.json packages/package.json docs/package.json"
+  },
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/core": "2.0.0-beta.62",
+    "@vuepress/utils": "2.0.0-beta.62",
+    "bumpp": "^9.1.0",
+    "concurrently": "^8.0.1",
+    "cpx2": "^4.2.3",
+    "vue": "^3.3.2",
+    "vuepress": "2.0.0-beta.62"
+  }
+}

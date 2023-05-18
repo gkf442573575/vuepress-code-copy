@@ -1,0 +1,12 @@
+{
+  "name": "docs",
+  "version": "1.0.5",
+  "scripts": {
+    "docs:dev": "npx vuepress dev --port=9527 --open",
+    "docs:build": "npx vuepress build"
+  },
+  "devDependencies": {
+    "vuepress": "2.0.0-beta.62",
+    "vuepress-code-copy": "workspace:*"
+  }
+}

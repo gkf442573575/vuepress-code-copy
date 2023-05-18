@@ -1,0 +1,48 @@
+{
+  "name": "vuepress-code-copy",
+  "version": "1.0.5",
+  "description": "Code Copy Plugin For Vuepress2.X",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkf442573575/vuepress-code-copy.git"
+  },
+  "keywords": [
+    "vuepress"
+  ],
+  "author": "gkf442573575@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gkf442573575/vuepress-code-copy/issues"
+  },
+  "homepage": "https://gkf442573575.github.io/vuepress-code-copy",
+  "scripts": {
+    "build": "npm run clean && npm run lib && npm run copy",
+    "copy": "cpx \"src/**/*.{css,vue}\" dist",
+    "clean": "rimraf dist *.tsbuildinfo",
+    "dev": "rimraf *.tsbuildinfo && npm run copy && npm run lib:dev",
+    "lib": "tsc -b tsconfig.build.json",
+    "lib:dev": "tsc -b tsconfig.build.json --watch"
+  },
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/core": "2.0.0-beta.62",
+    "@vuepress/utils": "2.0.0-beta.62",
+    "@vueuse/core": "^10.1.2",
+    "rimraf": "^5.0.1",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.2"
+  }
+}
