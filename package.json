@@ -20,7 +20,7 @@
     "build": "pnpm run -C packages build",
     "dev": "pnpm run -C packages build && concurrently \"pnpm run lib:dev\" \"pnpm run docs:dev\" && pnpm run lib:copy",
     "docs:dev": "pnpm run -C docs docs:dev",
-    "docs:build": "pnpm run -C docs docs:build",
+    "docs:build": "pnpm run -C packages build && pnpm run -C docs docs:build",
     "lib:copy": "pnpm run -C packages copy",
     "lib:dev": "pnpm run -C packages dev",
     "release:version": "bumpp package.json packages/package.json docs/package.json"
