@@ -18,6 +18,7 @@
   "homepage": "https://github.com/gkf442573575/vuepress-code-copy#readme",
   "scripts": {
     "build": "pnpm run -C packages build",
+    "bump": "pnpm run release:version",
     "dev": "pnpm run -C packages build && concurrently \"pnpm run lib:dev\" \"pnpm run docs:dev\" && pnpm run lib:copy",
     "docs:dev": "pnpm run -C docs docs:dev",
     "docs:build": "pnpm run -C packages build && pnpm run -C docs docs:build",
