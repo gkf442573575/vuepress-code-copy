@@ -8,7 +8,12 @@
     "url": "git+https://github.com/gkf442573575/vuepress-code-copy.git"
   },
   "keywords": [
-    "vuepress"
+    "vuepress",
+    "vuepress next",
+    "vuepress copy",
+    "vuepress2 copy",
+    "copy",
+    "code copy"
   ],
   "author": "gkf442573575@163.com",
   "license": "MIT",

@@ -1,7 +1,7 @@
 import { usePageData } from '@vuepress/client'
 import { useClipboard, useEventListener } from '@vueuse/core'
 import { defineComponent, nextTick, onMounted, ref, watch } from 'vue'
-import { copiedText, copyText, pageDelay, selector } from '../define.js'
+import { copiedText, copyText, pageDelay, selector, color } from '../define.js'
 
 export const CodeCopy = defineComponent({
   name: 'CodeCopy',
@@ -41,6 +41,8 @@ export const CodeCopy = defineComponent({
           const copyHtml = document.createElement('span')
           copyHtml.className = 'code-copy-btn'
           copyHtml.innerText = dataExt ? `${copyText} | ${dataExt}` : copyText
+          // 设置文字颜色
+          copyHtml.style.color = color
           copyHtml.setAttribute('data-ext', dataExt)
           parent.appendChild(copyHtml)
         }

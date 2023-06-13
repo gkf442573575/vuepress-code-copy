@@ -35,6 +35,14 @@ export interface CopyPulginOptions {
    * @default 300
    */
   pageDelay?: number
+
+  /**
+   * copy text color
+   *
+   * 字体颜色
+   * @default 'var(--code-ln-color)'
+   */
+  color?: string
 }
 
 export const CodeCopyPulgin = ({
@@ -42,6 +50,7 @@ export const CodeCopyPulgin = ({
   copiedText = 'Copied',
   selector = 'div[class*="language-"]',
   pageDelay = 300,
+  color = 'var(--code-ln-color)',
 }: CopyPulginOptions = {}): Plugin => ({
   name: 'vuepress-code-copy',
   define: {
@@ -49,6 +58,7 @@ export const CodeCopyPulgin = ({
     __COPY_COPIEDTEXT__: copiedText,
     __COPY_SELECTOR__: selector,
     __COPY_PAGEDELAY__: pageDelay,
+    __COPY_COLOR__: color,
   },
   clientConfigFile: path.resolve(__dirname, '../client/config.js'),
 })
