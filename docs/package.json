@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "scripts": {
     "docs:dev": "npx vuepress dev --port=9527 --open",
     "docs:build": "npx vuepress build"
