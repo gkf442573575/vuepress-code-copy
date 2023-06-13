@@ -60,5 +60,12 @@ export interface CopyPulginOptions {
    * @default 300
    */
   pageDelay?: number
+  /**
+   * copy text color
+   *
+   * 字体颜色
+   * @default 'var(--code-ln-color)'
+   */
+  color?: string
 }
 ```
