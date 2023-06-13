@@ -1,6 +1,6 @@
 {
   "name": "vuepress-code-copy",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Code Copy Plugin For Vuepress2.X",
   "type": "module",
   "main": "./dist/index.js",
