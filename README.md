@@ -5,6 +5,10 @@
 [![NpmVersion](https://img.shields.io/npm/v/vuepress-code-copy.svg)](https://www.npmjs.com/package/vuepress-code-copy)
 ![npm](https://img.shields.io/npm/dw/vuepress-code-copy.svg)
 
+### Example
+
+[![vuepress-code-copy.png](https://i.postimg.cc/1Xg9gmb1/vuepress-code-copy.png)](https://postimg.cc/zHrm6rJx)
+
 ### Install
 
 ```bash
